@@ -37,3 +37,11 @@ console.log(
     console.log(e)
   )
 );
+
+Promise.any([firstPromise, secondPromise, thirdPromise]).then((e) =>
+  console.log(e + '\npromise any\n')
+);
+
+Promise.allSettled([firstPromise, secondPromise, thirdPromise]).then((e) =>
+  console.log(e + '\npromise all settled\n')
+);
